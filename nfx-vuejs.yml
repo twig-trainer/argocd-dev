@@ -9,7 +9,7 @@ metadata:
     - resources-finalizer.argocd.argoproj.io
   # Add labels to your application object.
   labels:
-    name: guestbook
+    name: nfx-vuejs
 spec:
   # The project the application belongs to.
   project: default
@@ -33,10 +33,10 @@ spec:
           repository: vladimir8y/nflx-dev
           pullPolicy: Always
           # Overrides the image tag whose default is the chart appVersion.
-          tag: "build_122"
+          tag: "build_123"
         imagePullSecrets: []
-        nameOverride: "phoenix-app"
-        fullnameOverride: "phoenix-chart"
+        nameOverride: "nfx-vuejs-app"
+        fullnameOverride: "nfx-vuejs-chart"
         serviceAccount:
           # Specifies whether a service account should be created
           create: true
