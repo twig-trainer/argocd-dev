@@ -131,17 +131,3 @@ spec:
         duration: 5s # the amount to back off. Default unit is seconds, but could also be a duration (e.g. "2m", "1h")
         factor: 2 # a factor to multiply the base duration after each failed retry
         maxDuration: 3m # the maximum amount of time allowed for the backoff strategy
-
-  # Will ignore differences between live and desired states during the diff. Note that these configurations are not
-  # used during the sync process.
-  ignoreDifferences:
-  # for the specified json pointers
-  - group: apps
-    kind: Deployment
-    jsonPointers:
-    - /spec/replicas
-  # for the specified managedFields managers
-  - group: "*"
-    kind: "*"
-    managedFieldsManagers:
-    - kube-controller-manager
