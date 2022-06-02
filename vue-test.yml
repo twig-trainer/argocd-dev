@@ -38,8 +38,8 @@ spec:
           tag: "build_109"
 
         imagePullSecrets: []
-        nameOverride: "phoenix-app"
-        fullnameOverride: "phoenix-chart"
+        nameOverride: "vue-test-app"
+        fullnameOverride: "vue-test-chart"
 
         serviceAccount:
           # Specifies whether a service account should be created
