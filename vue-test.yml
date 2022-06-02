@@ -1,7 +1,7 @@
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: guestbook
+  name: vue-test
   # You'll usually want to add your resources to the argocd namespace.
   namespace: argocd
   # Add this finalizer ONLY if you want these to cascade delete.
@@ -9,7 +9,7 @@ metadata:
     - resources-finalizer.argocd.argoproj.io
   # Add labels to your application object.
   labels:
-    name: guestbook
+    name: vue-test
 spec:
   # The project the application belongs to.
   project: default
@@ -32,10 +32,10 @@ spec:
         replicaCount: 3
 
         image:
-          repository: nginx
+          repository: vladimir8y/nflx-dev
           pullPolicy: Always
           # Overrides the image tag whose default is the chart appVersion.
-          tag: ""
+          tag: "build_109"
 
         imagePullSecrets: []
         nameOverride: "phoenix-app"
