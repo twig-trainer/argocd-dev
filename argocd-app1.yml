@@ -32,10 +32,10 @@ spec:
         replicaCount: 3
 
         image:
-          repository: nginx
+          repository: vladimir8y/nflx-dev
           pullPolicy: Always
           # Overrides the image tag whose default is the chart appVersion.
-          tag: ""
+          tag: "build_109"
 
         imagePullSecrets: []
         nameOverride: "phoenix-app"
