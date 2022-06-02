@@ -33,7 +33,7 @@ spec:
           repository: vladimir8y/nflx-dev
           pullPolicy: Always
           # Overrides the image tag whose default is the chart appVersion.
-          tag: "build_124"
+          tag: "build_127"
         imagePullSecrets: []
         nameOverride: "nfx-vuejs-app"
         fullnameOverride: "nfx-vuejs-chart"
